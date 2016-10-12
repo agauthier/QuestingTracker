@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Questing Tracker</string>
+
+    <!-- Custom -->
+    <string name="button_label_plus_one">+1</string>
+    <string name="button_label_plus_three">+3</string>
+    <string name="button_label_plus_five">+5</string>
+    <string name="button_label_plus_ten">+10</string>
+    <string name="button_label_minus_one">-1</string>
+    <string name="button_label_minus_three">-3</string>
+    <string name="button_label_minus_five">-5</string>
+    <string name="button_label_minus_ten">-10</string>
+    <string name="button_label_clear">Clear</string>
+    
+</resources>
