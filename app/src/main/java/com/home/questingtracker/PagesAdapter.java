@@ -1,21 +1,26 @@
 package com.home.questingtracker;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class PagesAdapter extends FragmentPagerAdapter {
+class PagesAdapter extends FragmentPagerAdapter {
 
 	private static final int NB_PAGES = 2;
 	private static final String title_prefix = "Staging Area ";
 	
-	public <T extends Fragment> PagesAdapter(FragmentManager fragmentManager) {
+	PagesAdapter(FragmentManager fragmentManager) {
 		super(fragmentManager);
 	}
 
 	@Override
 	public Fragment getItem(int position) {
-		return new TrackerPageFragment(getTitle(position));
+		Bundle bundle = new Bundle();
+		bundle.putString(TrackerPageFragment.TITLE_KEY, getTitle(position));
+		TrackerPageFragment trackerPageFragment = new TrackerPageFragment();
+		trackerPageFragment.setArguments(bundle);
+		return trackerPageFragment;
 	}
 
 	@Override
